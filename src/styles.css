@@ -1,0 +1,4061 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+
+
+
+
+
+
+:root {
+
+
+
+  font-family: 'DM Sans', sans-serif;
+
+
+
+  color: #554941;
+
+
+
+  background: #fbf6f0;
+
+
+
+  font-synthesis: none;
+
+
+
+  text-rendering: optimizeLegibility;
+
+
+
+  -webkit-font-smoothing: antialiased;
+
+
+
+  --pink: #d9a0a3;
+
+
+
+  --rose: #bd777f;
+
+
+
+  --sage: #91a28a;
+
+
+
+  --cream: #fbf6f0;
+
+
+
+  --gold: #b79a62;
+
+
+
+  --ink: #554941;
+
+
+
+}
+
+
+
+
+
+
+
+* {
+
+
+
+  box-sizing: border-box;
+
+
+
+}
+
+
+
+
+
+
+
+body {
+
+
+
+  margin: 0;
+
+
+
+  min-width: 320px;
+
+
+
+  min-height: 100vh;
+
+
+
+  background: radial-gradient(
+
+
+
+    ellipse at 50% 0%,
+
+
+
+    #fffdf9 0%,
+
+
+
+    #fbf6f0 58%,
+
+
+
+    #f6eee7 100%
+
+
+
+  );
+
+
+
+}
+
+
+
+
+
+
+
+button,
+
+
+
+a {
+
+
+
+  -webkit-tap-highlight-color: transparent;
+
+
+
+}
+
+
+
+
+
+
+
+button {
+
+
+
+  font: inherit;
+
+
+
+}
+
+
+
+
+
+
+
+.app-shell {
+
+
+
+  position: relative;
+
+
+
+  min-height: 100vh;
+
+
+
+  overflow: hidden;
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+}
+
+
+
+
+
+
+
+.top-glow {
+
+
+
+  position: absolute;
+
+
+
+  top: -180px;
+
+
+
+  left: 50%;
+
+
+
+  transform: translateX(-50%);
+
+
+
+  width: 480px;
+
+
+
+  height: 360px;
+
+
+
+  background: #fffaf5;
+
+
+
+  border-radius: 50%;
+
+
+
+  filter: blur(40px);
+
+
+
+  pointer-events: none;
+
+
+
+}
+
+
+
+
+
+
+
+.site-header {
+
+
+
+  width: min(100% - 36px, 920px);
+
+
+
+  margin: 0 auto;
+
+
+
+  display: flex;
+
+
+
+  justify-content: space-between;
+
+
+
+  align-items: center;
+
+
+
+  padding: 23px 0;
+
+
+
+  position: relative;
+
+
+
+  z-index: 1;
+
+
+
+  border-bottom: 1px solid #e9ddd2;
+
+
+
+}
+
+
+
+
+
+
+
+.brand {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 9px;
+
+
+
+  text-decoration: none;
+
+
+
+  color: #7d6c60;
+
+
+
+  font-size: 11px;
+
+
+
+  letter-spacing: .09em;
+
+
+
+  text-transform: uppercase;
+
+
+
+}
+
+
+
+
+
+
+
+.brand-mark {
+
+
+
+  color: var(--rose);
+
+
+
+  display: grid;
+
+
+
+  place-items: center;
+
+
+
+}
+
+
+
+
+
+
+
+.text-link {
+
+
+
+  border: 0;
+
+
+
+  background: transparent;
+
+
+
+  color: #8d7770;
+
+
+
+  display: inline-flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  gap: 7px;
+
+
+
+  padding: 10px 4px;
+
+
+
+  cursor: pointer;
+
+
+
+  font-size: 12px;
+
+
+
+}
+
+
+
+
+
+
+
+.page-content {
+
+
+
+  position: relative;
+
+
+
+  z-index: 1;
+
+
+
+  width: min(100% - 38px, 510px);
+
+
+
+  margin: 0 auto;
+
+
+
+  text-align: center;
+
+
+
+  flex: 1;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  flex-direction: column;
+
+
+
+  padding: 40px 0 34px;
+
+
+
+}
+
+
+
+
+
+
+
+.eyebrow {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  gap: 7px;
+
+
+
+  color: #a27e70;
+
+
+
+  font-size: 10px;
+
+
+
+  text-transform: uppercase;
+
+
+
+  letter-spacing: .19em;
+
+
+
+  margin-bottom: 20px;
+
+
+
+}
+
+
+
+
+
+
+
+.eyebrow svg {
+
+
+
+  color: var(--gold);
+
+
+
+}
+
+
+
+
+
+
+
+h1 {
+
+
+
+  font-family: 'Playfair Display', serif;
+
+
+
+  font-weight: 400;
+
+
+
+  letter-spacing: -.045em;
+
+
+
+  font-size: clamp(39px, 10vw, 59px);
+
+
+
+  line-height: 1.08;
+
+
+
+  margin: 0;
+
+
+
+  color: #5a4942;
+
+
+
+}
+
+
+
+
+
+
+
+h1 em {
+
+
+
+  color: #b77d82;
+
+
+
+  font-weight: 400;
+
+
+
+}
+
+
+
+
+
+
+
+.intro {
+
+
+
+  font-size: 13px;
+
+
+
+  line-height: 1.9;
+
+
+
+  color: #8b7a70;
+
+
+
+  max-width: 370px;
+
+
+
+  margin: 18px auto 24px;
+
+
+
+}
+
+
+
+
+
+
+
+.primary-button {
+
+
+
+  border: 0;
+
+
+
+  border-radius: 999px;
+
+
+
+  background: #b97f83;
+
+
+
+  color: white;
+
+
+
+  min-height: 50px;
+
+
+
+  padding: 0 25px;
+
+
+
+  display: inline-flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  gap: 13px;
+
+
+
+  cursor: pointer;
+
+
+
+  box-shadow: 0 8px 18px #b97f832b;
+
+
+
+  transition: transform .2s, background .2s;
+
+
+
+  font-size: 12px;
+
+
+
+  letter-spacing: .035em;
+
+
+
+}
+
+
+
+
+
+
+
+.primary-button:hover {
+
+
+
+  background: #a96f76;
+
+
+
+  transform: translateY(-2px);
+
+
+
+}
+
+
+
+
+
+
+
+.primary-button:focus-visible,
+
+
+
+.text-link:focus-visible {
+
+
+
+  outline: 3px solid #c9ad78;
+
+
+
+  outline-offset: 4px;
+
+
+
+}
+
+
+
+
+
+
+
+.tiny-note {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 6px;
+
+
+
+  color: #b19b8e;
+
+
+
+  font-size: 10px;
+
+
+
+  letter-spacing: .06em;
+
+
+
+  margin: 22px 0 0;
+
+
+
+}
+
+
+
+
+
+
+
+.tiny-note svg {
+
+
+
+  color: #c78b91;
+
+
+
+}
+
+
+
+
+
+
+
+.hero-art {
+
+
+
+  width: 220px;
+
+
+
+  height: 175px;
+
+
+
+  position: relative;
+
+
+
+  margin: 0 auto 13px;
+
+
+
+}
+
+
+
+
+
+
+
+.sun-disc {
+
+
+
+  position: absolute;
+
+
+
+  width: 138px;
+
+
+
+  height: 138px;
+
+
+
+  border-radius: 50%;
+
+
+
+  background: #f1dfd4;
+
+
+
+  left: 41px;
+
+
+
+  top: 10px;
+
+
+
+}
+
+
+
+
+
+
+
+.hero-heart {
+
+
+
+  position: absolute;
+
+
+
+  left: 76px;
+
+
+
+  top: 45px;
+
+
+
+  width: 75px;
+
+
+
+  height: 75px;
+
+
+
+  display: grid;
+
+
+
+  place-items: center;
+
+
+
+  color: #c9828b;
+
+
+
+  transform: rotate(-8deg);
+
+
+
+  animation: float 4s ease-in-out infinite;
+
+
+
+}
+
+
+
+
+
+
+
+.hero-heart svg {
+
+
+
+  width: 75px;
+
+
+
+  height: 75px;
+
+
+
+  filter: drop-shadow(0 8px 8px #b77d8226);
+
+
+
+}
+
+
+
+
+
+
+
+.flower-stem {
+
+
+
+  position: absolute;
+
+
+
+  color: #9ba78a;
+
+
+
+  font-size: 43px;
+
+
+
+}
+
+
+
+
+
+
+
+.stem-one {
+
+
+
+  left: 28px;
+
+
+
+  top: 91px;
+
+
+
+  transform: rotate(-22deg);
+
+
+
+}
+
+
+
+
+
+
+
+.stem-two {
+
+
+
+  right: 24px;
+
+
+
+  top: 80px;
+
+
+
+  transform: rotate(18deg);
+
+
+
+  color: #c8a77b;
+
+
+
+}
+
+
+
+
+
+
+
+.heart-float {
+
+
+
+  position: absolute;
+
+
+
+  color: #b68e60;
+
+
+
+  font-size: 25px;
+
+
+
+}
+
+
+
+
+
+
+
+.hf-one {
+
+
+
+  right: 29px;
+
+
+
+  top: 21px;
+
+
+
+}
+
+
+
+
+
+
+
+.hf-two {
+
+
+
+  left: 28px;
+
+
+
+  top: 25px;
+
+
+
+}
+
+
+
+
+
+
+
+.overline {
+
+
+
+  font-size: 9px;
+
+
+
+  letter-spacing: .2em;
+
+
+
+  color: #a8897d;
+
+
+
+  margin: 0 0 13px;
+
+
+
+}
+
+
+
+
+
+
+
+.floral {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 8px;
+
+
+
+  color: #b5a17b;
+
+
+
+  opacity: .6;
+
+
+
+}
+
+
+
+
+
+
+
+.floral svg {
+
+
+
+  width: 22px;
+
+
+
+  height: 22px;
+
+
+
+}
+
+
+
+
+
+
+
+.welcome-flowers {
+
+
+
+  margin-bottom: 22px;
+
+
+
+}
+
+
+
+
+
+
+
+.welcome-flowers span {
+
+
+
+  font-size: 10px;
+
+
+
+}
+
+
+
+
+
+
+
+.welcome .primary-button {
+
+
+
+  margin-top: 2px;
+
+
+
+}
+
+
+
+
+
+
+
+.garden .intro {
+
+
+
+  margin-top: 14px;
+
+
+
+  margin-bottom: 20px;
+
+
+
+}
+
+
+
+
+
+
+
+.progress-wrap {
+
+
+
+  width: 100%;
+
+
+
+  max-width: 370px;
+
+
+
+  text-align: left;
+
+
+
+  margin: 0 auto 18px;
+
+
+
+}
+
+
+
+
+
+
+
+.progress-label {
+
+
+
+  display: flex;
+
+
+
+  justify-content: space-between;
+
+
+
+  font-size: 10px;
+
+
+
+  color: #9a887c;
+
+
+
+  margin-bottom: 8px;
+
+
+
+}
+
+
+
+
+
+
+
+.progress-label strong {
+
+
+
+  color: #b47d82;
+
+
+
+  font-weight: 600;
+
+
+
+}
+
+
+
+
+
+
+
+.progress-track {
+
+
+
+  height: 4px;
+
+
+
+  background: #eaded3;
+
+
+
+  border-radius: 10px;
+
+
+
+  overflow: hidden;
+
+
+
+}
+
+
+
+
+
+
+
+.progress-track span {
+
+
+
+  display: block;
+
+
+
+  height: 100%;
+
+
+
+  background: #bd8589;
+
+
+
+  border-radius: 10px;
+
+
+
+  transition: width .35s;
+
+
+
+}
+
+
+
+
+
+
+
+/* GARDEN BACKGROUND */
+
+
+
+
+
+
+
+.garden-scene {
+
+
+
+  position: relative;
+
+
+
+  width: 100%;
+
+
+
+  max-width: 410px;
+
+
+
+  aspect-ratio: 3 / 2;
+
+
+
+  min-height: 250px;
+
+
+
+  border-radius: 130px 130px 22px 22px;
+
+
+
+  overflow: hidden;
+
+
+
+  background: #304333 url('/garden-background.png') center 52% / cover no-repeat;
+
+
+
+  border: 1px solid #d8c6ac;
+
+
+
+  box-shadow: 0 12px 32px #8c6b5030;
+
+
+
+}
+
+
+
+
+
+
+
+/* HIDDEN HEARTS */
+
+
+
+
+
+
+
+.hidden-heart {
+
+
+
+  position: absolute;
+
+
+
+  z-index: 2;
+
+
+
+  width: 32px;
+
+
+
+  height: 32px;
+
+
+
+  padding: 0;
+
+
+
+  display: grid;
+
+
+
+  place-items: center;
+
+
+
+  border: none;
+
+
+
+  border-radius: 0;
+
+
+
+  background: transparent;
+
+
+
+  color: #f3d8c0;
+
+
+
+  opacity: .40;
+
+
+
+  cursor: pointer;
+
+
+
+  filter: drop-shadow(0 1px 1px #30241b55);
+
+
+
+  transition: opacity .2s ease, transform .2s ease;
+
+
+
+  animation: none;
+
+
+
+  appearance: none;
+
+
+
+}
+
+
+
+
+
+
+
+.hidden-heart svg {
+
+
+
+  width: 15px;
+
+
+
+  height: 15px;
+
+
+
+  stroke-width: 1.5;
+
+
+
+}
+
+
+
+
+
+
+
+.hidden-heart:hover {
+
+
+
+  opacity: .40;
+
+
+
+  transform: scale(1.08);
+
+
+
+  background: transparent;
+
+
+
+}
+
+
+
+
+
+
+
+.hidden-heart:focus-visible {
+
+
+
+  opacity: .8;
+
+
+
+  outline: 2px solid #f3d8c0;
+
+
+
+  outline-offset: 1px;
+
+
+
+}
+
+
+
+
+
+
+
+.hidden-heart.is-found {
+
+
+
+  opacity: 0;
+
+
+
+  pointer-events: none;
+
+
+
+  background: transparent;
+
+
+
+  border: none;
+
+
+
+  box-shadow: none;
+
+
+
+  filter: none;
+
+
+
+  animation: none;
+
+
+
+}
+
+
+
+
+
+
+
+/* HEART POSITIONS */
+
+
+
+
+
+
+
+.heart-1 {
+
+
+
+  left: 17%;
+
+
+
+  top: 43%;
+
+
+
+}
+
+
+
+
+
+
+
+.heart-2 {
+
+
+
+  left: 36%;
+
+
+
+  top: 31%;
+
+
+
+}
+
+
+
+
+
+
+
+.heart-3 {
+
+
+
+  left: 72%;
+
+
+
+  top: 45%;
+
+
+
+}
+
+
+
+
+
+
+
+.heart-4 {
+
+
+
+  left: 82%;
+
+
+
+  top: 67%;
+
+
+
+}
+
+
+
+
+
+
+
+.heart-5 {
+
+
+
+  left: 10%;
+
+
+
+  top: 76%;
+
+
+
+}
+
+
+
+
+
+
+
+.garden-hint {
+
+
+
+  font-size: 10px;
+
+
+
+  color: #a28d80;
+
+
+
+  margin: 16px 0 4px;
+
+
+
+}
+
+
+
+
+
+
+
+.back-link {
+
+
+
+  margin-top: 14px;
+
+
+
+}
+
+
+
+
+
+
+
+/* GIFT UNLOCK */
+
+
+
+
+
+
+
+.unlock .gift-illustration {
+
+
+
+  height: 200px;
+
+
+
+  width: 220px;
+
+
+
+  position: relative;
+
+
+
+  margin: 0 auto 15px;
+
+
+
+  animation: float 4s ease-in-out infinite;
+
+
+
+}
+
+
+
+
+
+
+
+.gift-box {
+
+
+
+  position: absolute;
+
+
+
+  width: 128px;
+
+
+
+  height: 95px;
+
+
+
+  background: #d8a2a1;
+
+
+
+  left: 46px;
+
+
+
+  top: 76px;
+
+
+
+  border-radius: 5px 5px 12px 12px;
+
+
+
+  box-shadow: inset 0 -8px #c48c8e30;
+
+
+
+}
+
+
+
+
+
+
+
+.gift-ribbon {
+
+
+
+  position: absolute;
+
+
+
+  left: 54px;
+
+
+
+  width: 20px;
+
+
+
+  height: 100%;
+
+
+
+  background: #f2dfbd;
+
+
+
+}
+
+
+
+
+
+
+
+.gift-lid {
+
+
+
+  position: absolute;
+
+
+
+  z-index: 2;
+
+
+
+  left: 37px;
+
+
+
+  top: 60px;
+
+
+
+  width: 146px;
+
+
+
+  height: 27px;
+
+
+
+  background: #c58a8d;
+
+
+
+  border-radius: 5px;
+
+
+
+  transform: rotate(-4deg);
+
+
+
+  box-shadow: 0 4px 9px #7c55551a;
+
+
+
+}
+
+
+
+
+
+
+
+.ribbon-bow {
+
+
+
+  position: absolute;
+
+
+
+  top: -31px;
+
+
+
+  left: 56px;
+
+
+
+  color: #f5e4c7;
+
+
+
+  font-size: 39px;
+
+
+
+}
+
+
+
+
+
+
+
+.gift-spark {
+
+
+
+  position: absolute;
+
+
+
+  color: #b79a62;
+
+
+
+  font-size: 26px;
+
+
+
+}
+
+
+
+
+
+
+
+.spark-a {
+
+
+
+  left: 19px;
+
+
+
+  top: 53px;
+
+
+
+}
+
+
+
+
+
+
+
+.spark-b {
+
+
+
+  right: 17px;
+
+
+
+  top: 30px;
+
+
+
+}
+
+
+
+
+
+
+
+.unlock .intro {
+
+
+
+  margin-bottom: 24px;
+
+
+
+}
+
+
+
+
+
+
+
+/* VOUCHER */
+
+
+
+
+
+
+
+.voucher-page {
+
+
+
+  max-width: 470px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-page .intro {
+
+
+
+  margin-top: 14px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-card {
+
+
+
+  width: 100%;
+
+
+
+  background: #fffaf4;
+
+
+
+  border: 1px solid #e6d4c2;
+
+
+
+  padding: 25px 23px 18px;
+
+
+
+  box-shadow: 0 14px 35px #7b604412;
+
+
+
+  position: relative;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-card:before,
+
+
+
+.voucher-card:after {
+
+
+
+  content: '';
+
+
+
+  position: absolute;
+
+
+
+  left: 0;
+
+
+
+  right: 0;
+
+
+
+  height: 7px;
+
+
+
+  background: radial-gradient(
+
+
+
+    circle at 7px 0,
+
+
+
+    transparent 7px,
+
+
+
+    #fffaf4 7.5px
+
+
+
+  ) 0 0 / 14px 14px repeat-x;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-card:before {
+
+
+
+  top: -1px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-card:after {
+
+
+
+  bottom: -1px;
+
+
+
+  transform: rotate(180deg);
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-top {
+
+
+
+  display: flex;
+
+
+
+  justify-content: space-between;
+
+
+
+  align-items: center;
+
+
+
+  color: #ad8d62;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-flower {
+
+
+
+  font-size: 24px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-label {
+
+
+
+  font-size: 8px;
+
+
+
+  letter-spacing: .18em;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-rule {
+
+
+
+  height: 1px;
+
+
+
+  background: #e5d3be;
+
+
+
+  margin: 15px 0 21px;
+
+
+
+  position: relative;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-rule span {
+
+
+
+  position: absolute;
+
+
+
+  left: 50%;
+
+
+
+  top: 50%;
+
+
+
+  transform: translate(-50%, -50%);
+
+
+
+  background: #fffaf4;
+
+
+
+  padding: 0 10px;
+
+
+
+  color: #b89c67;
+
+
+
+  font-size: 12px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-for {
+
+
+
+  font-size: 8px;
+
+
+
+  letter-spacing: .2em;
+
+
+
+  color: #a88d7e;
+
+
+
+  margin: 0 0 6px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-card h2 {
+
+
+
+  font-family: 'Playfair Display', serif;
+
+
+
+  font-size: 34px;
+
+
+
+  font-weight: 400;
+
+
+
+  color: #a96f76;
+
+
+
+  margin: 0;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-treatment {
+
+
+
+  font-family: 'Playfair Display', serif;
+
+
+
+  font-style: italic;
+
+
+
+  font-size: 17px;
+
+
+
+  color: #7c6c60;
+
+
+
+  margin-top: 6px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-divider {
+
+
+
+  color: #b59b6b;
+
+
+
+  margin: 17px 0 8px;
+
+
+
+}
+
+
+
+
+
+
+
+.salon-name {
+
+
+
+  font-size: 12px;
+
+
+
+  letter-spacing: .12em;
+
+
+
+  text-transform: uppercase;
+
+
+
+  color: #6f7f69;
+
+
+
+  margin: 0 0 7px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-value {
+
+
+
+  font-size: 11px;
+
+
+
+  color: #9c897c;
+
+
+
+  margin: 0;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-meta {
+
+
+
+  display: flex;
+
+
+
+  justify-content: center;
+
+
+
+  gap: 38px;
+
+
+
+  border-top: 1px solid #ebded0;
+
+
+
+  border-bottom: 1px solid #ebded0;
+
+
+
+  padding: 14px 0;
+
+
+
+  margin-top: 19px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-meta div {
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  gap: 5px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-meta span {
+
+
+
+  font-size: 7px;
+
+
+
+  letter-spacing: .15em;
+
+
+
+  color: #ad9686;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-meta strong {
+
+
+
+  font-size: 10px;
+
+
+
+  font-weight: 500;
+
+
+
+  color: #74665c;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-terms {
+
+
+
+  font-size: 9px;
+
+
+
+  line-height: 1.7;
+
+
+
+  color: #9d8b7e;
+
+
+
+  margin: 14px auto 17px;
+
+
+
+  max-width: 300px;
+
+
+
+}
+
+
+
+
+
+
+
+.voucher-bottom {
+
+
+
+  display: flex;
+
+
+
+  justify-content: center;
+
+
+
+  align-items: center;
+
+
+
+  gap: 7px;
+
+
+
+  color: #b28d79;
+
+
+
+  font-size: 8px;
+
+
+
+  letter-spacing: .18em;
+
+
+
+}
+
+
+
+
+
+
+
+.family-note {
+
+
+
+  display: flex;
+
+
+
+  gap: 14px;
+
+
+
+  text-align: left;
+
+
+
+  margin: 25px 0 23px;
+
+
+
+  max-width: 390px;
+
+
+
+}
+
+
+
+
+
+
+
+.note-icon {
+
+
+
+  flex-shrink: 0;
+
+
+
+  color: #c08389;
+
+
+
+  margin-top: 3px;
+
+
+
+}
+
+
+
+
+
+
+
+.family-note .overline {
+
+
+
+  margin-bottom: 8px;
+
+
+
+}
+
+
+
+
+
+
+
+.family-note p:last-child {
+
+
+
+  font-family: 'Playfair Display', serif;
+
+
+
+  font-size: 14px;
+
+
+
+  line-height: 1.8;
+
+
+
+  color: #8b776b;
+
+
+
+  margin: 0;
+
+
+
+}
+
+
+
+
+
+
+
+/* MESSAGE MODAL */
+
+
+
+
+
+
+
+.modal-backdrop {
+
+
+
+  position: fixed;
+
+
+
+  z-index: 100;
+
+
+
+  inset: 0;
+
+
+
+  background: #4f423a70;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  padding: 18px;
+
+
+
+  overflow-y: auto;
+
+
+
+  backdrop-filter: blur(5px);
+
+
+
+}
+
+
+
+
+
+
+
+.message-modal {
+
+
+
+  width: 100%;
+
+
+
+  max-width: 370px;
+
+
+
+  max-height: calc(100vh - 36px);
+
+
+
+  overflow-y: auto;
+
+
+
+  flex: 0 1 370px;
+
+
+
+  box-sizing: border-box;
+
+
+
+  background: #fffaf4;
+
+
+
+  border: 1px solid #e6d5c5;
+
+
+
+  border-radius: 24px;
+
+
+
+  padding: 28px 22px;
+
+
+
+  text-align: center;
+
+
+
+  box-shadow: 0 20px 70px #3e2d251c;
+
+
+
+  animation: pop .25s ease-out;
+
+
+
+}
+
+
+
+
+
+
+
+/* FORCE PERSONAL IMAGE TO REMAIN SMALL */
+
+
+
+
+
+
+
+.message-modal .modal-memory {
+
+
+
+  display: block !important;
+
+
+
+  position: relative;
+
+
+
+  width: 140px !important;
+
+
+
+  height: 140px !important;
+
+
+
+  min-width: 140px !important;
+
+
+
+  min-height: 140px !important;
+
+
+
+  max-width: 140px !important;
+
+
+
+  max-height: 140px !important;
+
+
+
+  flex: 0 0 140px !important;
+
+
+
+  margin: 0 auto 18px !important;
+
+
+
+  padding: 0 !important;
+
+
+
+  overflow: hidden !important;
+
+
+
+  border-radius: 12px;
+
+
+
+  border: 1px solid #e6d5c5;
+
+
+
+  background: #f5e7e3;
+
+
+
+  box-shadow: 0 5px 15px #7b604412;
+
+
+
+}
+
+
+
+
+
+
+
+.message-modal .modal-memory img {
+
+
+
+  display: block !important;
+
+
+
+  position: static !important;
+
+
+
+  width: 140px !important;
+
+
+
+  height: 140px !important;
+
+
+
+  min-width: 140px !important;
+
+
+
+  min-height: 140px !important;
+
+
+
+  max-width: 140px !important;
+
+
+
+  max-height: 140px !important;
+
+
+
+  margin: 0 !important;
+
+
+
+  padding: 0 !important;
+
+
+
+  object-fit: cover !important;
+
+
+
+  object-position: center !important;
+
+
+
+  border: 0;
+
+
+
+  border-radius: 0;
+
+
+
+  transform: none !important;
+
+
+
+}
+
+
+
+
+
+
+
+.memory-image-fallback {
+
+
+
+  width: 140px;
+
+
+
+  height: 140px;
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  gap: 8px;
+
+
+
+  color: #b77d82;
+
+
+
+  background: #f5e7e3;
+
+
+
+}
+
+
+
+
+
+
+
+.memory-image-fallback p {
+
+
+
+  margin: 0;
+
+
+
+  font-family: 'Playfair Display', serif;
+
+
+
+  font-size: 14px;
+
+
+
+}
+
+
+
+
+
+
+
+.modal-heart {
+
+
+
+  width: 52px;
+
+
+
+  height: 52px;
+
+
+
+  border-radius: 50%;
+
+
+
+  display: grid;
+
+
+
+  place-items: center;
+
+
+
+  background: #f4e1df;
+
+
+
+  color: #bd7c83;
+
+
+
+  margin: 0 auto 20px;
+
+
+
+}
+
+
+
+
+
+
+
+.modal-heart svg {
+
+
+
+  width: 24px;
+
+
+
+}
+
+
+
+
+
+
+
+.message-modal h2 {
+
+
+
+  font-family: 'Playfair Display', serif;
+
+
+
+  font-size: 25px;
+
+
+
+  line-height: 1.35;
+
+
+
+  font-weight: 400;
+
+
+
+  color: #68554a;
+
+
+
+  margin: 0 0 13px;
+
+
+
+}
+
+
+
+
+
+
+
+.message-body {
+
+
+
+  color: #8b776b;
+
+
+
+  font-size: 13px;
+
+
+
+  line-height: 1.9;
+
+
+
+  margin: 0 0 20px;
+
+
+
+}
+
+
+
+
+
+
+
+.modal-progress {
+
+
+
+  font-size: 10px;
+
+
+
+  color: #ac9587;
+
+
+
+  margin-bottom: 21px;
+
+
+
+}
+
+
+
+
+
+
+
+/* FOOTER */
+
+
+
+
+
+
+
+.site-footer {
+
+
+
+  position: relative;
+
+
+
+  z-index: 1;
+
+
+
+  width: min(100% - 36px, 920px);
+
+
+
+  margin: 0 auto;
+
+
+
+  padding: 17px 0 22px;
+
+
+
+  border-top: 1px solid #e9ddd2;
+
+
+
+  display: flex;
+
+
+
+  justify-content: center;
+
+
+
+  gap: 15px;
+
+
+
+  color: #b29d8e;
+
+
+
+  font-size: 9px;
+
+
+
+  letter-spacing: .1em;
+
+
+
+}
+
+
+
+
+
+
+
+.footer-sparkles {
+
+
+
+  color: #bba071;
+
+
+
+}
+
+
+
+
+
+
+
+/* ANIMATIONS */
+
+
+
+
+
+
+
+@keyframes float {
+
+
+
+  0%, 100% {
+
+
+
+    transform: translateY(0);
+
+
+
+  }
+
+
+
+
+
+
+
+  50% {
+
+
+
+    transform: translateY(-7px);
+
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes heartbeat {
+
+
+
+  0%, 100% {
+
+
+
+    transform: scale(1);
+
+
+
+  }
+
+
+
+
+
+
+
+  50% {
+
+
+
+    transform: scale(1.05);
+
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes pop {
+
+
+
+  from {
+
+
+
+    opacity: 0;
+
+
+
+    transform: translateY(8px) scale(.98);
+
+
+
+  }
+
+
+
+
+
+
+
+  to {
+
+
+
+    opacity: 1;
+
+
+
+    transform: translateY(0) scale(1);
+
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+/* TABLET AND DESKTOP */
+
+
+
+
+
+
+
+@media (min-width: 700px) {
+
+
+
+  .page-content {
+
+
+
+    padding-top: 48px;
+
+
+
+    padding-bottom: 45px;
+
+
+
+  }
+
+
+
+
+
+
+
+  .site-header {
+
+
+
+    padding-top: 27px;
+
+
+
+    padding-bottom: 27px;
+
+
+
+  }
+
+
+
+
+
+
+
+  .garden-scene {
+
+
+
+    min-height: 280px;
+
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+/* SMALL PHONES */
+
+
+
+
+
+
+
+@media (max-width: 380px) {
+
+
+
+  .page-content {
+
+
+
+    width: calc(100% - 28px);
+
+
+
+    padding-top: 30px;
+
+
+
+  }
+
+
+
+
+
+
+
+  .garden-scene {
+
+
+
+    min-height: 235px;
+
+
+
+  }
+
+
+
+
+
+
+
+  .voucher-card {
+
+
+
+    padding-left: 15px;
+
+
+
+    padding-right: 15px;
+
+
+
+  }
+
+
+
+
+
+
+
+  .voucher-meta {
+
+
+
+    gap: 20px;
+
+
+
+  }
+
+
+
+
+
+
+
+  .brand {
+
+
+
+    font-size: 9px;
+
+
+
+  }
+
+
+
+
+
+
+
+  .message-modal {
+
+
+
+    padding: 24px 16px;
+
+
+
+  }
+
+
+
+
+
+
+
+  .message-modal .modal-memory {
+
+
+
+    width: 120px !important;
+
+
+
+    height: 120px !important;
+
+
+
+    min-width: 120px !important;
+
+
+
+    min-height: 120px !important;
+
+
+
+    max-width: 120px !important;
+
+
+
+    max-height: 120px !important;
+
+
+
+    flex-basis: 120px !important;
+
+
+
+  }
+
+
+
+
+
+
+
+  .message-modal .modal-memory img,
+
+
+
+  .memory-image-fallback {
+
+
+
+    width: 120px !important;
+
+
+
+    height: 120px !important;
+
+
+
+    min-width: 120px !important;
+
+
+
+    min-height: 120px !important;
+
+
+
+    max-width: 120px !important;
+
+
+
+    max-height: 120px !important;
+
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+/* ACCESSIBILITY */
+
+
+
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+
+
+  *,
+
+
+
+  *::before,
+
+
+
+  *::after {
+
+
+
+    animation-duration: .01ms !important;
+
+
+
+    animation-iteration-count: 1 !important;
+
+
+
+    scroll-behavior: auto !important;
+
+
+
+    transition-duration: .01ms !important;
+
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+/* PRINT VOUCHER */
+
+
+
+
+
+
+
+@media print {
+
+
+
+  body {
+
+
+
+    background: white;
+
+
+
+  }
+
+
+
+
+
+
+
+  .site-header,
+
+
+
+  .site-footer,
+
+
+
+  .voucher-page > .eyebrow,
+
+
+
+  .voucher-page > h1,
+
+
+
+  .voucher-page > .intro,
+
+
+
+  .voucher-page > .family-note,
+
+
+
+  .voucher-page > .primary-button,
+
+
+
+  .voucher-page > .back-link,
+
+
+
+  .voucher-page > .tiny-note {
+
+
+
+    display: none !important;
+
+
+
+  }
+
+
+
+
+
+
+
+  .page-content {
+
+
+
+    width: 100%;
+
+
+
+    padding: 0;
+
+
+
+  }
+
+
+
+
+
+
+
+  .voucher-card {
+
+
+
+    box-shadow: none;
+
+
+
+    border: 1px solid #d9c7b5;
+
+
+
+    max-width: 600px;
+
+
+
+    margin: 20px auto;
+
+
+
+  }
+
+
+
+
+
+
+
+  .app-shell {
+
+
+
+    min-height: 0;
+
+
+
+  }
+}
+
+/* REAL VOUCHER IMAGE */
+.real-voucher {
+  width: 100%;
+  max-width: 900px;
+  margin: 24px auto;
+  text-align: center;
+}
+
+.real-voucher-image {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  max-height: 55vh;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 12px 35px rgba(92, 53, 77, 0.18);
+}
+
+@media (max-width: 600px) {
+  .real-voucher {
+    width: 100%;
+    max-width: 100%;
+    margin: 12px auto;
+  }
+
+  .real-voucher-image {
+    width: 100%;
+    height: auto;
+    max-height: 42vh;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+
+  .real-voucher .primary-button {
+    margin-top: 14px;
+  }
+}
+
+/* PRINT VOUCHER */
+@media print {
+  .real-voucher .primary-button {
+    display: none !important;
+  }
+
+  .real-voucher {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .real-voucher-image {
+    width: 100%;
+    max-height: none;
+    box-shadow: none;
+  }
+}
